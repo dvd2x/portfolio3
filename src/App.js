@@ -39,10 +39,10 @@ class App extends Component {
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Drawer>
-          <Content>
-            <Main className="page-content" />
-          </Content>
         </Layout>
+        <Content>
+          <Main className="page-content" />
+        </Content>
       </div>
     );
   }
