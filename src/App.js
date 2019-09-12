@@ -40,8 +40,7 @@ class App extends Component {
             </Navigation>
           </Drawer>
           <Content>
-            <div className="page-content" />
-            <Main />
+            <Main className="page-content" />
           </Content>
         </Layout>
       </div>
