@@ -1,6 +1,16 @@
 import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import {
+  Layout,
+  Header,
+  Navigation,
+  Drawer,
+  Content,
+  Footer,
+  FooterLinkList,
+  FooterSection
+} from "react-mdl";
 import Main from "./components/main";
 import { Link } from "react-router-dom";
 
@@ -13,7 +23,7 @@ class App extends Component {
             className="header-color"
             title={
               <Link style={{ textDecoration: "none", color: "white" }} to="/">
-                MyPortfolio
+                David Piper
               </Link>
             }
             scroll
@@ -28,7 +38,7 @@ class App extends Component {
           <Drawer
             title={
               <Link style={{ textDecoration: "none", color: "black" }} to="/">
-                MyPortfolio
+                David Piper
               </Link>
             }
           >
@@ -39,9 +49,20 @@ class App extends Component {
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Drawer>
+
           <Content>
-            <Main className="page-content" />
+            <div className="page-content" />
+            <Main />
           </Content>
+
+          <Footer className="header-color" size="mini">
+            <FooterSection type="left" logo="Title">
+              <FooterLinkList>
+                <Link to="/">Help</Link>
+                <Link to="/">Privacy & Terms</Link>
+              </FooterLinkList>
+            </FooterSection>
+          </Footer>
         </Layout>
       </div>
     );

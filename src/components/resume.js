@@ -1,97 +1,103 @@
-import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
-import Education from './education';
-import Experience from './experience';
-import Skills from './skills';
-
+import React, { Component } from "react";
+import { Grid, Cell } from "react-mdl";
+import DavidImage from "../images/David2.png";
+import Education from "./education";
+import Experience from "./experience";
+import Skills from "./skills";
 
 class Resume extends Component {
   render() {
-    return(
+    return (
       <div>
-        <Grid>
-          <Cell col={4}>
-            <div style={{textAlign: 'center'}}>
-              <img
-                src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
-                alt="avatar"
-                style={{height: '200px'}}
-                 />
-            </div>
+        <div className="resume">
+          <h2>Work/Education</h2>
+          <hr />
+          <Grid>
+            <Cell col={4} className="resume-left">
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src={DavidImage}
+                  alt="David"
+                  style={{ height: "300px", borderRadius: "10%" }}
+                />
+              </div>
+              <h2 style={{ paddingTop: "2em" }}>David Piper</h2>
+              <h4 style={{ color: "grey" }}>Full Stack Developer</h4>
+              <hr style={{ borderTop: "3px solid #000120", width: "50%" }} />
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt
+                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                rerum facilis est et expedita distinctio. Nam libero tempore,
+                cum soluta nobis est eligendi optio cumque nihil impedit quo
+                minus id quod maxime placeat facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus.
+              </p>
+              <hr style={{ borderTop: "3px solid #000120", width: "50%" }} />
+              <h5>Address</h5>
+              <p>18093 Parkside St, Detroit MI 48221</p>
+              <h5>Phone</h5>
+              <p>(313) 848-6804</p>
+              <h5>Email</h5>
+              <p>piperd@comcast.net</p>
+              <h5>Web</h5>
+              <p>AvailableGeeks.com</p>
+              <p className="download">
+                <button>
+                  <a
+                    class="button"
+                    target="_blank"
+                    href="https://docs.google.com/document/d/1nqD8rLYoO8H9eMO64VXku66eBCq8g34GuzXB4r2dzCs/edit"
+                  >
+                    <i class="fa fa-download"></i> Download Resume
+                  </a>
+                </button>
+              </p>
+            </Cell>
+            <Cell className="resume-right-col" col={8}>
+              <h2>Education</h2>
+              <Education
+                startYear={1998}
+                endYear={2000}
+                schoolName={"Delaware State University"}
+                schoolDescription="On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain."
+              />
 
-            <h2 style={{paddingTop: '2em'}}>Paul Hanna</h2>
-            <h4 style={{color: 'grey'}}>Programmer</h4>
-            <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            <h5>Address</h5>
-            <p>1 Hacker Way Menlo Park, 94025</p>
-            <h5>Phone</h5>
-            <p>(123) 456-7890</p>
-            <h5>Email</h5>
-            <p>someone@example.com</p>
-            <h5>Web</h5>
-            <p>mywebsite.com</p>
-            <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-          </Cell>
-          <Cell className="resume-right-col" col={8}>
-            <h2>Education</h2>
-
-
-            <Education
-              startYear={2002}
-              endYear={2006}
-              schoolName="My University"
-              schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-               />
-
-               <Education
-                 startYear={2007}
-                 endYear={2009}
-                 schoolName="My 2nd University"
-                 schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                  />
-                <hr style={{borderTop: '3px solid #e22947'}} />
-
+              <Education
+                startYear={1996}
+                endYear={1998}
+                schoolName={"Delaware Technical & Community College"}
+                schoolDescription="On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;"
+              />
+              <hr style={{ borderTop: "3px solid #fff" }} />
               <h2>Experience</h2>
 
-            <Experience
-              startYear={2009}
-              endYear={2012}
-              jobName="First Job"
-              jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+              <Experience
+                startYear={2019}
+                endYear={"present"}
+                jobName="Thinkful"
+                jobDescription="Learned industry best practices and practical software development standards with a focus on HTML5, CSS3, JavaScript, jQuery, Node.js, React, Redux, and algorithms & data structures. Created and deployed mobile-first applications while learning new languages and frameworks by collaborating several hours every week with a senior web developer."
               />
 
               <Experience
-                startYear={2012}
-                endYear={2016}
-                jobName="Second Job"
-                jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                />
-              <hr style={{borderTop: '3px solid #e22947'}} />
+                startYear={2016}
+                endYear={"present"}
+                jobName="Gp Strategies"
+                jobDescription="Reviewed performance reports and documentation from customers and field engineers, and completed root cause analysis on trucks, assembly procedure, and test equipment. Inspected malfunctioning and damaged products to determine problem. Given support to plant assembly management for electrical quality control issues."
+              />
+              <hr style={{ borderTop: "3px solid #fff" }} />
               <h2>Skills</h2>
-              <Skills
-                skill="javascript"
-                progress={100}
-                />
-                <Skills
-                  skill="HTML/CSS"
-                  progress={80}
-                  />
-                  <Skills
-                    skill="NodeJS"
-                    progress={50}
-                    />
-                    <Skills
-                      skill="React"
-                      progress={25}
-                      />
-
-
-          </Cell>
-        </Grid>
+              <Skills skill="HTML/CSS" progress={95} />
+              <Skills skill="NodeJS" progress={65} />
+              <Skills skill="Javascript" progress={40} />
+              <Skills skill="React" progress={35} />
+            </Cell>
+          </Grid>
+        </div>
       </div>
-    )
+    );
   }
 }
 
